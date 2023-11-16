@@ -29,6 +29,9 @@ void executor(char *line, unsigned int lineN)
 	else if (strcmp(opcode, "pint") == 0)
 		pint(&stackLink, lineN);
 
+	else if (strcmp(opcode, "pop") == 0)
+		pop(&stackLink, lineN);
+
 	else
 	{
 		fprintf(stderr, "L%d: unknown intruction %s\n", lineN, opcode);

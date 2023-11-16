@@ -42,5 +42,6 @@ void pint(stack_t **stackLink, unsigned int lineN);
 void push(stack_t **stackLink, int num);
 void pall(stack_t **stackLink, unsigned int lineN);
 void executor(char *opcode, unsigned int lineN);
+void pop(stack_t **stackLink, unsigned int lineN);
 
 #endif /*MONTY_H*/

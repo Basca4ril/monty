@@ -11,7 +11,7 @@ void divid(stack_t **stackLink, unsigned int lineN)
 
 	if (*stackLink == NULL || (*stackLink)->next == NULL)
 	{
-		fprintf(stderr, "L%d: can't divide, stack too short\n", lineN);
+		fprintf(stderr, "L%d: can't div, stack too short\n", lineN);
 		exit(EXIT_FAILURE);
 	}
 

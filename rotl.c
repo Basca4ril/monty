@@ -5,7 +5,7 @@
  * @stackLink: list
  * @lineN: line number
  */
-void rotl(stack_t **stack, unsigned int line_number)
+void rotl(stack_t **stackLink, unsigned int lineN)
 {
 	stack_t *num1, *num2;
 

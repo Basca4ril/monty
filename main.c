@@ -10,6 +10,8 @@ int main(int argc, char *argv[])
 	ssize_t read;
 	unsigned int lineN = 0;
 
+	stackLink = NULL;
+
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");

@@ -32,6 +32,9 @@ void executor(char *line, unsigned int lineN)
 	else if (strcmp(opcode, "pop") == 0)
 		pop(&stackLink, lineN);
 
+	else if (strcmp(opcode, "swap") == 0)
+		swap(&stackLink, lineN);
+
 	else
 	{
 		fprintf(stderr, "L%d: unknown intruction %s\n", lineN, opcode);

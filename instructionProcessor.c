@@ -71,9 +71,7 @@ void executor(char *line, unsigned int lineN)
 
 	else
 	{
-		fprintf(stderr, "L%d: unknown intruction %s\n", lineN, opcode);
+		fprintf(stderr, "L%d: unknown instruction %s\n", lineN, opcode);
 		exit(EXIT_FAILURE);
 	}
 }
-
-

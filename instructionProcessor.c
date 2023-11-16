@@ -59,6 +59,9 @@ void executor(char *line, unsigned int lineN)
 	else if (strcmp(opcode, "pchar") == 0)
 		pchar(&stackLink, lineN);
 
+	else if (strcmp(opcode, "pstr") == 0)
+		pstr(&stackLink, lineN);
+
 	else
 	{
 		fprintf(stderr, "L%d: unknown intruction %s\n", lineN, opcode);

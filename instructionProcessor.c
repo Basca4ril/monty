@@ -47,8 +47,11 @@ void executor(char *line, unsigned int lineN)
 	else if (strcmp(opcode, "div") == 0)
 		divid(&stackLink, lineN);
 
-	else if (strcmp(opcode, "mul"))
+	else if (strcmp(opcode, "mul") == 0)
 		mul(&stackLink, lineN);
+
+	else if (strcmp(opcode, "mod") == 0)
+		mod(&stackLink, lineN);
 
 	else
 	{

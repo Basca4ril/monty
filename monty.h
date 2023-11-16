@@ -53,5 +53,6 @@ void mod(stack_t **stackLink, unsigned int lineN);
 void pchar(stack_t **stackLink, unsigned int lineN);
 void pstr(stack_t **stackLink, unsigned int lineN);
 void rotl(stack_t **stackLink, unsigned int lineN);
+void rotr(stack_t **stackLink, unsigned int lineN);
 
 #endif /*MONTY_H*/

@@ -64,6 +64,10 @@ void executor(char *line, unsigned int lineN)
 
 	else if (strcmp(opcode, "rotl") == 0)
 		rotl(&stackLink, lineN);
+	
+	else if (strcmp(opcode, "rotr") == 0)
+		rotr(&stackLink, lineN);
+
 
 	else
 	{

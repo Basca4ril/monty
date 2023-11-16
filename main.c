@@ -1,27 +1,36 @@
 #include "monty.h"
 
+stack_t *stackLink = NULL;
+
 int main(int argc, char *argv[])
 {
 	FILE *file;
-	stack_t *st = NULL;
+	char *line = NULL;
+	size_t len = 0;
+	ssize_t read;
+	unsigned int lineN = 0;
 
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
-		return (EXIT_FAILURE);
+		exit(EXIT_FAILURE);
 	}
 
 	file = fopen(argv[1], "r");
-
-	if (file == NULL)
+	if (!file)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
-		return (EXIT_FAILURE);
+		exit(EXIT_FAILURE);
+	}
+	while ((read = getline(&line, &len, file)) != -1)
+	{
+		lineN++;
+		executor(line, lineN);
 	}
 
-	processor(file, &st);
-
 	fclose(file);
+	if (line)
+		free(line);
 
 	return (EXIT_SUCCESS);
 }

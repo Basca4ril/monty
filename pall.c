@@ -11,7 +11,7 @@ void pall(stack_t **stackLink, unsigned int lineN)
 
 	(void)lineN;
 
-	while(curr != NULL)
+	while(curr)
 	{
 		printf("%d\n", curr->n);
 		curr = curr->next;

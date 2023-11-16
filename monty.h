@@ -1,5 +1,6 @@
 #ifndef MONTY_H
 #define MONTY_H
+#define _POSIX_C_SOURCE 200809L
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -35,10 +36,11 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+extern stack_t *stackLink;
+
 void push(stack_t **stackLink, int num);
 void pall(stack_t **stackLink, unsigned int lineN);
-void processor(FILE *file, stack_t **stackLink);
-void executor(char *command, unsigned int lineN, stack_t **stackLink);
-int is_validint(const char *str);
+void executor(char *opcode, unsigned int lineN);
+/*int is_validint(const char *str);*/
 
 #endif /*MONTY_H*/

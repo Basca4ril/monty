@@ -47,6 +47,9 @@ void executor(char *line, unsigned int lineN)
 	else if (strcmp(opcode, "div") == 0)
 		divid(&stackLink, lineN);
 
+	else if (strcmp(opcode, "mul"))
+		mul(&stackLink, lineN);
+
 	else
 	{
 		fprintf(stderr, "L%d: unknown intruction %s\n", lineN, opcode);

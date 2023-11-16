@@ -48,5 +48,6 @@ void add(stack_t **stackLink, unsigned int lineN);
 void nop(stack_t **stackLink, unsigned int lineN);
 void sub(stack_t **stackLink, unsigned int lineN);
 void divid(stack_t **stackLink, unsigned int lineN);
+void mul(stack_t **stackLink, unsigned int lineN);
 
 #endif /*MONTY_H*/

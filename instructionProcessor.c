@@ -38,6 +38,9 @@ void executor(char *line, unsigned int lineN)
 	else if (strcmp(opcode, "add") == 0)
 		add(&stackLink, lineN);
 
+	else if (strcmp(opcode, "nop") == 0)
+		nop(&stackLink, lineN);
+
 	else
 	{
 		fprintf(stderr, "L%d: unknown intruction %s\n", lineN, opcode);

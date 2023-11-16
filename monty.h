@@ -45,5 +45,6 @@ void executor(char *opcode, unsigned int lineN);
 void pop(stack_t **stackLink, unsigned int lineN);
 void swap(stack_t **stackLink, unsigned int lineN);
 void add(stack_t **stackLink, unsigned int lineN);
+void nop(stack_t **stackLink, unsigned int lineN);
 
 #endif /*MONTY_H*/
